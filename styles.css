@@ -1,0 +1,303 @@
+/* Base & Reset */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #e8f5e9;
+  padding: 40px 20px;       /* more space around header */
+  position: relative; /* allow absolute-positioned elements inside header */
+}
+/* Wrapper for header and image */
+.header-wrapper {
+  display: flex;
+  align-items: Right;       /* vertically align image and header */
+  gap: 15px;                 /* space between image and header */
+  max-width: 800px;          /* constrain width */
+  margin: 0 auto 20px auto;  /* center wrapper and add bottom spacing */
+}
+
+/* Image next to header */
+.header-image img {
+  width: 80px;               /* adjust as needed */
+  height: auto;
+  border-radius: 8px;        /* optional rounded corners */
+}
+
+/* Header styling */
+.header-wrapper h2 {
+  font-size: 1.8em;
+  color: #1b5e20;
+  margin: 0;                 /* remove default margin so aligned with image */
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px auto;
+}
+
+/* Contact Button */
+.contact-button {
+  position: fixed;       /* stays in the corner when scrolling */
+  top: 10px;             /* distance from top */
+  right: 10px;           /* distance from right */
+  background-color: #4CAF50; /* green button */
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+  z-index: 1000;         /* stays on top of other elements */
+}
+
+.contact-button:hover {
+  background-color: #45a049; /* darker green on hover */
+}
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #2e7d32;
+}
+
+header p {
+  margin: 5px 0;
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Subheadline under header */
+.subheadline {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #1b5e20;
+}
+
+.description {
+  font-size: 1.1em;
+  margin-top: 10px;
+  color: #444;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+/* Hero Section */
+.hero {
+  padding: 10px 10px;
+  margin-bottom: 5px;
+  background: #c8e6c9;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center content horizontally */
+  justify-content: center; /* center content vertically within the hero area */
+  min-height: 40vh; /* roughly center in middle of page */
+  line-height: 1.0;
+}
+
+.hero h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #1b5e20;
+  max-width: 800px; /* constrain width and keep centered */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; /* left-justify heading */
+}
+
+.hero p {
+  font-size: 1.0em;
+  margin-bottom: 5px; /* match section bottom padding so gaps equal */
+  color: #333;
+  max-width: 800px; /* constrain paragraph width */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; /* left-justify paragraph */
+  line-height: 1.0;
+}
+
+/* Button */
+button {
+  padding: 30px 20px;
+  font-size: 1.2em;
+  background: linear-gradient(#4caf50, #2e7d32);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: 0 10px 0 rgba(0,0,0,0.12), 0 14px 28px rgba(0,0,0,0.08);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.18);
+  display: inline-block;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 0 rgba(0,0,0,0.14), 0 18px 36px rgba(0,0,0,0.10);
+}
+
+button:active {
+  transform: translateY(3px);
+  box-shadow: 0 4px 0 rgba(0,0,0,0.08), 0 6px 12px rgba(0,0,0,0.06);
+}
+
+/* Section general spacing */
+section {
+  padding: 50px 20px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+/* Gallery Sections */
+.gallery-section {
+  padding: 10px 10px;
+}
+
+/* Alternate backgrounds for galleries */
+.gallery-section:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Gallery heading */
+.gallery-section h2 {
+  text-align: center;
+  color: #1b5e20;
+  margin-bottom: 25px;
+  font-size: 1.6em;
+}
+
+/* Gallery layout */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Gallery images */
+.photo {
+  width: 300px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-bottom: 15px;
+}
+
+/* Benefits Section */
+.benefits {
+  background: #ffffff;
+  padding: 10px 10px;   /* Top/Bottom padding makes it tall */
+}
+
+.benefits h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 10px 10px;   /* Top/Bottom padding makes it tall */
+}
+
+.benefits-list li {
+  font-size: 1.2em;
+  margin-bottom: 10px;      /* spacing between items */
+  line-height: 1.0;         /* line spacing inside item */
+  padding-left: 10px;
+}
+
+/* Program Details Section */
+.program-details {
+  background: #f9f9f9;
+  padding: 25px 20px;
+  max-width: 800px;
+  margin: 20px auto; /* center and separate from other sections */
+  border-radius: 8px;
+}
+
+.program-details h2 {
+  font-size: 1.8em;
+  margin-bottom: 25px;
+}
+
+.details-list {
+  list-style: none;
+  padding: 10px;
+  max-width: 700px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.details-list li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  margin-top: 5px;   /* spacing between items */
+  line-height: 1.0;
+}
+
+/* Highlight location */
+/.details-list li:last-child {
+  font-weight: bold;/
+}/
+
+/* Footer */
+footer {
+  background: #e8f5e9;
+  padding: 5px;
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1; /* optional, keeps font readable */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Remove default paragraph spacing in footer */
+footer p {
+  margin: 0;   /* remove top & bottom margin */
+  padding: 0;  /* remove any padding */
+  line-height: 1.1; /* adjust spacing if needed */
+}
+
+/* Call-to-action section (separate control for the main button) */
+.cta {
+  text-align: center;
+  padding: 10px 20px 40px 20px; /* smaller top gap, larger bottom gap */
+}
+
+.cta button {
+  padding: 12px 28px; /* tighter button so it doesn't dominate layout */
+  font-size: 1.1em;
+  border-radius: 12px;
+}
+.focus-list {
+  list-style: none;           /* removes bullets from inner list */
+  padding-left: 30px;         /* indents the sub-list */
+  margin-top: 0px;    
+  font-size: 0.75em;        /* space above the sub-list */
+}
+
+.focus-list .focus-desc {
+  display: inline;       /* ensures it’s on its own line */
+  font-size: 0.75em;    /* slightly smaller than title */
+  color: #444;          /* optional softer color */
+  margin-top: 4px;      /* spacing between title and description */
+  line-height: 1.4;     /* tighter line spacing */
+  padding-left: 5px;
+}
